@@ -3,10 +3,8 @@ load_dotenv()
 import streamlit as st
 import os
 import google.generativeai as genai
-
 genai.configure(api_key=os.getenv("Google_api_key"))
-
-#function to load gemini model and get response
+#function to load gemini model and get respone
 model=genai.GenerativeModel("gemini-pro")
 
 chat=model.start_chat(history=[])#save the history
